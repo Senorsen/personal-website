@@ -1,0 +1,28 @@
+{
+  "name": "personal-website",
+  "version": "1.0.0",
+  "description": "Senorsen's personal website (2016) - frontend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Senorsen/personal-website.git"
+  },
+  "author": "Senorsen <senorsen.zhang@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Senorsen/personal-website/issues"
+  },
+  "homepage": "https://github.com/Senorsen/personal-website#readme",
+  "dependencies": {
+    "babel-core": "^6.9.0",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.5.0",
+    "babelify": "^7.3.0",
+    "react": "^15.0.2",
+    "react-dom": "^15.0.2"
+  }
+}
