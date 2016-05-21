@@ -23,7 +23,7 @@ module.exports = {
             },
             {
                 test: /\.(css|less)$/,
-                loader: ExtractTextPlugin.extract('style', css-raw!autoprefixer!less')
+                loader: ExtractTextPlugin.extract('style', 'css-raw!autoprefixer!less')
             },
             {
                 test: /\.(html|svg)$/,
