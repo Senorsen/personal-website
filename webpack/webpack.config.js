@@ -1,6 +1,8 @@
 import path from 'path';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
 import webpack from 'webpack';
+import precss from 'precss';
+import autoprefixer from 'autoprefixer';
 
 import babelConfig from './babel.config';
 
@@ -13,12 +15,12 @@ export default {
     module: {
         loaders: [
             {
-                test: /\.css$/,
-                loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
+                test: /\.(css|less)$/,
+                loader: ExtractTextPlugin.extract('style!css!postcss')
             },
             {
-                test: /\.less$/,
-                loader: ExtractTextPlugin.extract('style-loader', 'css-loader!less-loader')
+                test: /\.(html|png|svg)$/,
+                loader: 'raw'
             },
             {
                 test: /\.js$/,
@@ -32,5 +34,6 @@ export default {
         new ExtractTextPlugin('style.css', {
             allChunks: true
         })
-    ]
+    ],
+    postcss: () => [precss, autoprefixer]
 };
