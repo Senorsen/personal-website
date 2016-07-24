@@ -4,8 +4,8 @@
   "description": "Senorsen's personal website (2016) - frontend",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "babel prototype/demo.js --out-file prototype/demo-i.js && browserify prototype/demo-i.js -o prototype/bundle.js && uglifyjs prototype/bundle.js --compress --mangle -o prototype/bundle.min.js"
+    "start": "webpack-dev-server --progress --colors",
+    "build": "webpack --progress --colors"
   },
   "repository": {
     "type": "git",
@@ -24,16 +24,20 @@
     "babel-preset-es2015": "^6.9.0",
     "babel-preset-react": "^6.5.0",
     "babelify": "^7.3.0",
+    "promise": "^7.1.1",
     "react": "^15.0.2",
     "react-dom": "^15.0.2"
   },
   "devDependencies": {
     "babel-cli": "^6.9.0",
-    "babel-core": "^6.9.0",
+    "babel-core": "^6.11.4",
     "babel-loader": "^6.2.4",
     "babel-plugin-syntax-async-functions": "^6.8.0",
+    "babel-plugin-syntax-object-rest-spread": "^6.8.0",
     "babel-plugin-transform-async-to-generator": "^6.8.0",
+    "babel-plugin-transform-class-properties": "^6.11.5",
     "babel-plugin-transform-regenerator": "^6.9.0",
+    "babel-plugin-transform-runtime": "^6.9.0",
     "babel-polyfill": "^6.9.1",
     "babel-preset-es2015": "^6.9.0",
     "extract-text-webpack-plugin": "^1.0.1",
