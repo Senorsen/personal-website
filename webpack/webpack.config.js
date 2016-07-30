@@ -35,5 +35,10 @@ export default {
             allChunks: true
         })
     ],
-    postcss: () => [precss, autoprefixer]
+    postcss: () => [precss, autoprefixer],
+    devServer: {
+        port: 3320,
+        inline: true,
+        host: '0.0.0.0'
+    }
 };
