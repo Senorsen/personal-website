@@ -1,7 +1,7 @@
 
 export default {
     cacheDirectory: true,
-    presets: ['es2015'],
+    presets: ['es2015', 'react'],
     plugins: [
         'transform-runtime',
         'syntax-async-functions',
