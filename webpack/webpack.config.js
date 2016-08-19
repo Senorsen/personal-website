@@ -21,8 +21,18 @@ export default {
     module: {
         loaders: [
             {
-                test: /\.(css|less)$/,
-                loader: ExtractTextPlugin.extract('style!css!postcss')
+                test: /\.css$/,
+                loader: ExtractTextPlugin.extract({
+                    fallbackLoader: 'style',
+                    loader: 'css!postcss'
+                })
+            },
+            {
+                test: /\.scss$/,
+                loader: ExtractTextPlugin.extract({
+                    fallbackLoader: 'style',
+                    loader: 'css!postcss!sass'
+                })
             },
             {
                 test: /\.(png|svg)$/,
@@ -42,7 +52,7 @@ export default {
     },
     plugins: [
         new ExtractTextPlugin({
-            filename: 'style.css',
+            filename: 'styles.css',
             allChunks: true
         }),
         new HtmlPlugin({
@@ -57,7 +67,7 @@ export default {
             }
         })
     ],
-    postcss: () => [precss, autoprefixer],
+    postcss: [precss, autoprefixer({browsers: ['last 2 versions']})],
     devServer: {
         port: 3320,
         inline: true,
