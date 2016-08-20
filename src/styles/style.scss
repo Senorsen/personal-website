@@ -1,0 +1,36 @@
+html, body {
+    min-height: 100vh;
+}
+
+html, body, input, textarea, button {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+}
+
+header {
+    flex: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+}
+
+#app, .app-container {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+$footerHeight: 50px;
+
+.content-container {
+    flex: 1;
+}
+
+footer {
+    height: $footerHeight;
+    flex: none;
+    font-size: 0.9em;
+}

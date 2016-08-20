@@ -6,14 +6,18 @@ import Container from 'muicss/lib/react/container';
 import * as muicss from 'muicss/lib/sass/mui.scss';
 
 import MyAppbar from './MyAppbar';
+import Footer from './Footer';
+
+import './styles/style.scss';
 
 class Main extends React.Component {
     render() {
         return (
-            <div>
+            <div className="app-container">
                 <MyAppbar />
-                <Container>
+                <Container className="content-container">
                 </Container>
+                <Footer />
             </div>
         );
     }
