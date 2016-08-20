@@ -7,6 +7,7 @@ export default {
         'syntax-async-functions',
         'syntax-object-rest-spread',
         'transform-async-to-generator',
+        'transform-decorators-legacy',
         'transform-class-properties'
     ]
 };

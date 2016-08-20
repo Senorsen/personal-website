@@ -12,7 +12,7 @@ const production = process.env.NODE_ENV === 'production';
 export default {
     context: path.join(__dirname, '../src'),
     entry: {
-        src: './entry'
+        main: './entry'
     },
     output: {
         path: path.join(__dirname, '../public'),
@@ -52,7 +52,7 @@ export default {
     },
     plugins: [
         new ExtractTextPlugin({
-            filename: 'styles.css',
+            filename: '[name].css',
             allChunks: true
         }),
         new HtmlPlugin({

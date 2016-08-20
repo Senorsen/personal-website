@@ -1,0 +1,19 @@
+$normalTextColor: rgba(0, 0, 0, 0.87);
+$normalBgColor: rgba(255, 255, 255, 0.5);
+
+header a {
+    color: $normalTextColor;
+}
+
+header.my-appbar {
+    color: $normalTextColor;
+    background-color: $normalBgColor;
+
+    li > a {
+        padding: 0 15px;
+    }
+
+    ul.mui-list--inline {
+        margin-bottom: 0;
+    }
+}
