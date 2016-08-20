@@ -15,7 +15,7 @@ class MyAppBar extends React.Component {
         return (
             <header className="mui-appbar my-appbar">
                 <div className="mui-container">
-                    <table width="100%">
+                    <table width="100%"><tbody>
                         <tr className="mui--appbar-height">
                             <td className="mui--text-title">Senorsen</td>
                             <td style={this.style.right}>
@@ -26,7 +26,7 @@ class MyAppBar extends React.Component {
                                 </ul>
                             </td>
                         </tr>
-                    </table>
+                    </tbody></table>
                 </div>
             </header>
         );
