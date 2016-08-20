@@ -21,6 +21,7 @@ class MyAppBar extends React.Component {
                             <td style={this.style.right}>
                                 <ul className="mui-list--inline mui--text-body2">
                                     <li><a href="https://blog.senorsen.com">Blog</a></li>
+                                    <li><a href="https://resume.senorsen.com">Resume</a></li>
                                     <li><a href="https://www.senorsen.com/misc">Misc.</a></li>
                                 </ul>
                             </td>
